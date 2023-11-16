@@ -1,8 +1,8 @@
-import fastify from 'fastify'
-import { appRoutes } from './http/routes'
-import { ZodError } from 'zod'
-import { env } from './env'
 import fastifyJwt from '@fastify/jwt'
+import fastify from 'fastify'
+import { appRoutes } from '@/http/routes'
+import { ZodError } from 'zod'
+import { env } from '@/env'
 
 export const app = fastify()
 
@@ -22,7 +22,8 @@ app.setErrorHandler((error, _, reply) => {
   if (env.NODE_ENV !== 'production') {
     console.error(error)
   } else {
-    // TODO here should log to on external tool like Datadog/NewRelic/Sentry
+    // TODO: Here we should log to a external tool like DataDog/NewRelic/Sentry
   }
-  return reply.status(500).send({ message: 'Internal server error. ' })
+
+  return reply.status(500).send({ message: 'Internal server error.' })
 })
