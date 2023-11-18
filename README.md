@@ -6,7 +6,9 @@ Os usuários com perfil MEMBER têm a capacidade de realizar diversas ações na
 
 Usuários com perfil ADMIN possuem a capacidade de criar academias na plataforma, validar usuários e realizar verificações específicas de usuários com base em horas e datas.
 
-API Também  foi desenvolvida utilizando os princípios do design pattern SOLID, incorporando o repository pattern e implementando uma cobertura abrangente de testes, juntamente com estratégias para um banco de dados in-memory.
+A API foi desenvolvida aplicando os princípios do design pattern SOLID, adotando o repository pattern e estabelecendo uma cobertura abrangente de testes. Além disso, implementamos estratégias para um banco de dados in-memory e utilizamos o GitHub Workflows para aprimorar os testes de casos de uso e os testes end-to-end (e2e) da aplicação.
+
+ 
 
 ## Tecnologias
 
